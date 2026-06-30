@@ -1,0 +1,28 @@
+<style>
+    body { background: #000; color: #fff; font-family: sans-serif; position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; }
+    .watermark { position: absolute; font-size: 8vw; color: rgba(255,255,255,0.05); font-weight: bold; pointer-events: none; }
+    .content { text-align: center; z-index: 1; }
+    .btn-wa { background:#25D366; padding:15px 30px; color:#fff; text-decoration:none; display:inline-block; margin-top:20px; }
+</style>
+<div class="watermark">MASTERCUTLABSTUDIO</div>
+<div class="content">
+    <h1 id="title">Loading...</h1>
+    <p id="desc" style="font-size: 24px;"></p>
+    <a href="https://wa.me/917055495075" class="btn-wa">Book Now via WhatsApp</a>
+</div>
+<script>
+    const data = {
+        '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"],
+        '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"],
+        '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"],
+        '4': ["Vlog", "Edit Only: ₹300"],
+        '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"],
+        '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"],
+        '7': ["Reel", "Shoot: ₹179 | Edit: ₹199"],
+        '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"],
+        '9': ["Event", "Shoot & Edit: ₹9,999"]
+    };
+    const cat = new URLSearchParams(window.location.search).get('cat');
+    document.getElementById('title').innerText = data[cat][0];
+    document.getElementById('desc').innerText = data[cat][1];
+</script>
