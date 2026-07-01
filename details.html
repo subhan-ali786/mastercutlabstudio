@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
     body { background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; }
-    .watermark { position: absolute; font-size: 8vw; color: rgba(255,255,255,0.05); pointer-events: none; }
+    .watermark { position: absolute; font-size: 8vw; color: rgba(255,255,255,0.05); pointer-events: none; text-align: center; }
     .content { text-align: center; z-index: 1; }
     .btn-wa { background:#25D366; padding:15px 30px; color:#fff; text-decoration:none; display:inline-block; margin-top:20px; border-radius: 10px; }
     .socials { margin-top: 50px; }
@@ -19,8 +19,22 @@
     </div>
 </div>
 <script>
-    const data = { '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"], '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"] };
+    const data = {
+        '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"],
+        '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"],
+        '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"],
+        '4': ["Vlog", "Edit Only: ₹300"],
+        '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"],
+        '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"],
+        '7': ["Reel", "Shoot: ₹179 | Edit: ₹199"],
+        '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"],
+        '9': ["Event", "Shoot & Edit: ₹9,999"]
+    };
     const cat = new URLSearchParams(window.location.search).get('cat');
-    document.getElementById('title').innerText = data[cat][0];
-    document.getElementById('desc').innerText = data[cat][1];
+    if(data[cat]) {
+        document.getElementById('title').innerText = data[cat][0];
+        document.getElementById('desc').innerText = data[cat][1];
+    } else {
+        document.getElementById('title').innerText = "Category Not Found";
+    }
 </script>
