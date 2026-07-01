@@ -2,35 +2,28 @@
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-    body { background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; }
-    .watermark { position: fixed; font-size: 10vw; color: rgba(255,255,255,0.03); pointer-events: none; z-index: 0; text-align: center; }
+    body { background: #000; color: #fff; font-family: sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+    .bg { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600'); background-size: cover; background-position: center; min-height: 90vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 20px; }
+    .watermark { position: fixed; font-size: 8vw; color: rgba(255,255,255,0.05); pointer-events: none; z-index: 0; text-align: center; }
     .content { text-align: center; z-index: 1; }
     .btn-wa { background:#25D366; padding:15px 30px; color:#fff; text-decoration:none; display:inline-block; margin-top:20px; border-radius: 10px; }
-    .socials { margin-top: 50px; }
+    .socials { margin-top: 40px; }
     .socials a { color: #fff; font-size: 20px; margin: 10px; text-decoration: none; display: inline-block; }
 </style></head><body>
     <div class="watermark">MASTERCUTLABSTUDIO</div>
-    <div class="content">
-        <h1 id="title">Loading...</h1>
-        <p id="desc" style="font-size: 22px; margin-top: 20px;"></p>
-        <a href="https://wa.me/917055495075" class="btn-wa">Book Now via WhatsApp</a>
+    <div class="bg">
+        <div class="content">
+            <h1 id="title">Loading...</h1>
+            <p id="desc" style="font-size: 22px; margin-top: 20px;"></p>
+            <a href="https://wa.me/917055495075" class="btn-wa">Book Now via WhatsApp</a>
+        </div>
         <div class="socials">
             <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i><br><small>YouTube</small></a>
             <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i><br><small>Instagram</small></a>
         </div>
     </div>
 <script>
-    const data = {
-        '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"],
-        '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"],
-        '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"],
-        '4': ["Vlog", "Edit Only: ₹300"],
-        '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"],
-        '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"],
-        '7': ["Reel", "Shoot: ₹179 | Edit: ₹199"],
-        '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"],
-        '9': ["Event", "Shoot & Edit: ₹9,999"]
-    };
+    const data = { '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"], '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"], '4': ["Vlog", "Edit Only: ₹300"], '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"], '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"], '7': ["Reel", "Shoot: ₹179 | Edit: ₹199"], '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"], '9': ["Event", "Shoot & Edit: ₹9,999"] };
     const cat = new URLSearchParams(window.location.search).get('cat');
     document.getElementById('title').innerText = data[cat] ? data[cat][0] : "Category";
     document.getElementById('desc').innerText = data[cat] ? data[cat][1] : "Details not found.";
