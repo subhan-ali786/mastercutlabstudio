@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    body { background: #000; color: #fff; font-family: 'Outfit', sans-serif; height: 100vh; display: flex; align-items: center; justify-content: center; }
-    .box { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px); text-align: center; }
-    .price { font-size: 3rem; color: #00bcd4; font-weight: bold; }
-    .btn-wa { display: block; margin-top: 30px; padding: 15px; background: #25D366; color: #fff; text-decoration: none; border-radius: 15px; }
+    body { background: #000; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .card { border: 2px solid #00bcd4; padding: 40px; border-radius: 20px; text-align: center; width: 80%; }
+    .price-box { font-size: 1.5rem; margin: 20px 0; color: #00bcd4; }
+    .btn-wa { display: inline-block; padding: 20px 40px; background: #25D366; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; }
 </style></head><body>
-    <div class="box">
+    <div class="card">
         <h1 id="title">Loading...</h1>
-        <div class="price" id="desc">₹0</div>
-        <a href="https://wa.me/917055495075" class="btn-wa">BOOK NOW VIA WHATSAPP</a>
+        <div class="price-box" id="desc"></div>
+        <a href="https://wa.me/917055495075" class="btn-wa">BOOK NOW</a>
     </div>
 <script>
     const data = {
-        '1': ["Cinematic Short Film", "₹9,999"], '2': ["Cinematic Reel", "₹119"],
-        '3': ["Shop Promotion", "₹1,799"], '4': ["Vlog", "₹300"],
-        '5': ["Podcast", "₹4,999"], '6': ["Long Video", "₹9,999"],
-        '7': ["Reel", "₹119"], '8': ["Product Ad", "₹499"], '9': ["Event", "₹9,999"]
+        '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹119"],
+        '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"], '4': ["Vlog", "Edit Only: ₹300"],
+        '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"], '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"],
+        '7': ["Reel", "Shoot: ₹179 | Edit: ₹119"], '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"], '9': ["Event", "Shoot & Edit: ₹9,999"]
     };
     const cat = new URLSearchParams(window.location.search).get('cat');
     document.getElementById('title').innerText = data[cat][0];
