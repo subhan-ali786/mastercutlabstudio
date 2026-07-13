@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
 <style>
-    body { background: #000; color: #fff; text-align: center; font-family: sans-serif; margin: 0; min-height: 100vh; padding: 20px; }
-    .bg { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600'); background-size: cover; background-position: center; min-height: 90vh; padding: 20px; border-radius: 20px; }
-    .watermark { position: fixed; font-size: 8vw; color: rgba(255,255,255,0.05); pointer-events: none; z-index: 0; left: 5%; }
-    .card { background: rgba(34,34,34,0.9); padding: 15px; margin: 10px auto; max-width: 90%; border-radius: 10px; border: 1px solid #00bcd4; z-index: 1; position: relative; cursor: pointer; }
-    .socials { margin-top: 30px; position: relative; z-index: 1; }
-    .socials a { color: #fff; font-size: 20px; margin: 10px; text-decoration: none; display: inline-block; }
+    body { background: #000; color: #fff; font-family: 'Outfit', sans-serif; padding: 20px; }
+    .bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600'); background-size: cover; min-height: 100vh; padding: 20px; }
+    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 20px; margin: 15px auto; max-width: 500px; border-radius: 20px; backdrop-filter: blur(15px); transition: 0.3s; cursor: pointer; display: flex; align-items: center; }
+    .card:hover { background: rgba(0, 188, 212, 0.2); border-color: #00bcd4; transform: scale(1.02); }
 </style></head><body>
-    <div class="watermark">MASTERCUTLABSTUDIO</div>
     <div class="bg">
-        <h1 style="z-index:1; position:relative;">Select Service</h1>
+        <h2 style="text-align: center;">OUR SERVICES</h2>
         <div class="card" onclick="location.href='details.html?cat=1'">🎬 Cinematic Short Film</div>
         <div class="card" onclick="location.href='details.html?cat=2'">🚀 Cinematic Reel</div>
         <div class="card" onclick="location.href='details.html?cat=3'">🛍️ Shop Promotion</div>
-        <div class="card" onclick="location.href='details.html?cat=4'">🎥 Vlog</div>
-        <div class="card" onclick="location.href='details.html?cat=5'">🎙️ Podcast</div>
-        <div class="card" onclick="location.href='details.html?cat=6'">🎞️ Long Video</div>
-        <div class="card" onclick="location.href='details.html?cat=7'">⚡ Reel</div>
-        <div class="card" onclick="location.href='details.html?cat=8'">📦 Product Ad</div>
-        <div class="card" onclick="location.href='details.html?cat=9'">🎥 Event</div>
-        <div class="socials">
-            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i><br><small>YouTube</small></a>
-            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i><br><small>Instagram</small></a>
-        </div>
+        <!-- Isi tarah baaki 6 add karein -->
     </div>
 </body></html>
