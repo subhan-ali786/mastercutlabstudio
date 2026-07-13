@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-    body { background: #000; color: #fff; font-family: sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
-    .bg { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600'); background-size: cover; background-position: center; min-height: 90vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 20px; }
-    .watermark { position: fixed; font-size: 8vw; color: rgba(255,255,255,0.05); pointer-events: none; z-index: 0; text-align: center; }
-    .content { text-align: center; z-index: 1; }
-    .btn-wa { background:#25D366; padding:15px 30px; color:#fff; text-decoration:none; display:inline-block; margin-top:20px; border-radius: 10px; }
-    .socials { margin-top: 40px; }
-    .socials a { color: #fff; font-size: 20px; margin: 10px; text-decoration: none; display: inline-block; }
+    body { background: #000; color: #fff; font-family: 'Outfit', sans-serif; height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .box { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px); text-align: center; }
+    .price { font-size: 3rem; color: #00bcd4; font-weight: bold; }
+    .btn-wa { display: block; margin-top: 30px; padding: 15px; background: #25D366; color: #fff; text-decoration: none; border-radius: 15px; }
 </style></head><body>
-    <div class="watermark">MASTERCUTLABSTUDIO</div>
-    <div class="bg">
-        <div class="content">
-            <h1 id="title">Loading...</h1>
-            <p id="desc" style="font-size: 22px; margin-top: 20px;"></p>
-            <a href="https://wa.me/917055495075" class="btn-wa">Book Now via WhatsApp</a>
-        </div>
-        <div class="socials">
-            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i><br><small>YouTube</small></a>
-            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i><br><small>Instagram</small></a>
-        </div>
+    <div class="box">
+        <h1 id="title">Loading...</h1>
+        <div class="price" id="desc">₹0</div>
+        <a href="https://wa.me/917055495075" class="btn-wa">BOOK NOW VIA WHATSAPP</a>
     </div>
 <script>
-    const data = { '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹199"], '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"], '4': ["Vlog", "Edit Only: ₹300"], '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"], '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"], '7': ["Reel", "Shoot: ₹179 | Edit: ₹199"], '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"], '9': ["Event", "Shoot & Edit: ₹9,999"] };
+    const data = {
+        '1': ["Cinematic Short Film", "₹9,999"], '2': ["Cinematic Reel", "₹119"],
+        '3': ["Shop Promotion", "₹1,799"], '4': ["Vlog", "₹300"],
+        '5': ["Podcast", "₹4,999"], '6': ["Long Video", "₹9,999"],
+        '7': ["Reel", "₹119"], '8': ["Product Ad", "₹499"], '9': ["Event", "₹9,999"]
+    };
     const cat = new URLSearchParams(window.location.search).get('cat');
-    document.getElementById('title').innerText = data[cat] ? data[cat][0] : "Category";
-    document.getElementById('desc').innerText = data[cat] ? data[cat][1] : "Details not found.";
+    document.getElementById('title').innerText = data[cat][0];
+    document.getElementById('desc').innerText = data[cat][1];
 </script></body></html>
