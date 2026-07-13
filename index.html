@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-    body { background: #000; color: #fff; text-align: center; font-family: sans-serif; margin: 0; }
-    .bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600'); background-size: cover; background-position: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
-    .watermark { position: fixed; font-size: 10vw; color: rgba(255,255,255,0.05); font-weight: bold; pointer-events: none; z-index: 0; }
-    .content { z-index: 1; }
-    .btn { display: inline-block; padding: 15px 30px; background: #00bcd4; color: #000; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 20px; }
-    .socials { margin-top: 40px; z-index: 1; }
-    .socials a { color: #fff; font-size: 20px; margin: 10px; text-decoration: none; display: inline-block; }
-</style></head><body>
-    <div class="watermark">MASTERCUTLABSTUDIO</div>
-    <div class="bg">
-        <div class="content">
-            <h1>Mastercutlab Studio</h1>
-            <p>Cinematic Storytelling by Subhan Ali</p>
-            <a href="services.html" class="btn">START MASTERCUT</a>
-        </div>
+<html lang="hi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { margin: 0; background: #050505; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Glassmorphism Hero Section */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%); padding: 20px; }
+        h1 { font-size: 3rem; margin: 0; letter-spacing: -2px; text-transform: uppercase; }
+        .hero p { color: #888; margin-bottom: 30px; font-weight: 300; }
+        
+        /* Animated Button */
+        .btn { padding: 18px 40px; background: transparent; border: 1px solid #fff; color: #fff; text-decoration: none; border-radius: 50px; transition: 0.5s; backdrop-filter: blur(10px); }
+        .btn:hover { background: #fff; color: #000; transform: scale(1.05); }
+
+        /* Floating Watermark */
+        .watermark { position: fixed; top: 10%; width: 100%; text-align: center; font-size: 12vw; color: rgba(255,255,255,0.02); pointer-events: none; font-weight: 900; }
+
+        .socials { margin-top: 50px; }
+        .socials a { color: #555; font-size: 24px; margin: 0 15px; transition: 0.3s; }
+        .socials a:hover { color: #00bcd4; }
+    </style>
+</head>
+<body>
+    <div class="watermark">MASTERCUT</div>
+    <div class="hero">
+        <h1 data-aos="fade-up">MASTERCUTLAB</h1>
+        <p>Cinematic Storytelling | Professional Editing</p>
+        <a href="services.html" class="btn">ENTER STUDIO</a>
         <div class="socials">
-            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i><br><small>YouTube</small></a>
-            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i><br><small>Instagram</small></a>
+            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
-</body></html>
+</body>
+</html>
