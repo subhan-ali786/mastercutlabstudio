@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-    body { background: #000; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    .card { border: 2px solid #00bcd4; padding: 40px; border-radius: 20px; text-align: center; width: 80%; }
-    .price-box { font-size: 1.5rem; margin: 20px 0; color: #00bcd4; }
-    .btn-wa { display: inline-block; padding: 20px 40px; background: #25D366; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; }
+    body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
+    .bg { min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600'); background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .card { background: rgba(0,0,0,0.7); padding: 40px; border-radius: 20px; border: 1px solid #00bcd4; text-align: center; width: 80%; }
+    .footer { margin-top: 40px; }
+    .footer a { color: #fff; font-size: 25px; margin: 0 15px; }
 </style></head><body>
-    <div class="card">
-        <h1 id="title">Loading...</h1>
-        <div class="price-box" id="desc"></div>
-        <a href="https://wa.me/917055495075" class="btn-wa">BOOK NOW</a>
+    <div class="bg">
+        <div class="card">
+            <h1 id="title">Loading...</h1>
+            <div style="font-size: 1.5rem; color:#00bcd4;" id="desc"></div>
+            <a href="https://wa.me/917055495075" style="display:block; margin-top:20px; color:#25D366; font-weight:bold;">BOOK VIA WHATSAPP</a>
+        </div>
+        <div class="footer">
+            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917055495075"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </div>
 <script>
-    const data = {
-        '1': ["Cinematic Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Cinematic Reel", "Shoot: ₹100 | Edit: ₹119"],
-        '3': ["Shop Promotion", "Shoot: ₹1,799 | Edit: ₹199"], '4': ["Vlog", "Edit Only: ₹300"],
-        '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"], '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"],
-        '7': ["Reel", "Shoot: ₹179 | Edit: ₹119"], '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"], '9': ["Event", "Shoot & Edit: ₹9,999"]
-    };
+    const data = { '1': ["Short Film", "Shoot: ₹9,999 | Edit: ₹1,999"], '2': ["Reel", "Shoot: ₹100 | Edit: ₹119"], '3': ["Shop Ad", "Shoot: ₹1,799 | Edit: ₹199"], '4': ["Vlog", "Edit Only: ₹300"], '5': ["Podcast", "Shoot: ₹4,999 | Edit: ₹1,999"], '6': ["Long Video", "Shoot: ₹9,999 | Edit: ₹499"], '7': ["Shorts", "Shoot: ₹179 | Edit: ₹119"], '8': ["Product Ad", "Shoot: ₹499 | Edit: ₹199"], '9': ["Event", "Shoot & Edit: ₹9,999"] };
     const cat = new URLSearchParams(window.location.search).get('cat');
     document.getElementById('title').innerText = data[cat][0];
     document.getElementById('desc').innerText = data[cat][1];
