@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-    body { background: #050505; color: #fff; font-family: sans-serif; padding: 20px; margin: 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
-    .box { background: #111; padding: 30px; border-radius: 15px; border: 1px solid #333; text-align: center; cursor: pointer; transition: 0.4s; }
-    .box:hover { background: #00bcd4; transform: translateY(-10px); }
+    body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
+    .bg { min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600'); background-size: cover; padding: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; max-width: 600px; margin: auto; }
+    .box { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; cursor: pointer; transition: 0.3s; }
+    .box:hover { background: #00bcd4; }
+    .footer { text-align: center; margin-top: 40px; }
+    .footer a { color: #fff; font-size: 25px; margin: 0 15px; }
 </style></head><body>
-    <h2 style="text-align:center; font-size: 2.5rem;">OUR SERVICES</h2>
-    <div class="grid">
-        <div class="box" onclick="location.href='details.html?cat=1'">🎬<br>Short Film</div>
-        <div class="box" onclick="location.href='details.html?cat=2'">🚀<br>Reel</div>
-        <div class="box" onclick="location.href='details.html?cat=3'">🛍️<br>Shop Ad</div>
-        <div class="box" onclick="location.href='details.html?cat=4'">🎥<br>Vlog</div>
-        <div class="box" onclick="location.href='details.html?cat=5'">🎙️<br>Podcast</div>
-        <div class="box" onclick="location.href='details.html?cat=6'">🎞️<br>Long</div>
-        <div class="box" onclick="location.href='details.html?cat=7'">⚡<br>Shorts</div>
-        <div class="box" onclick="location.href='details.html?cat=8'">📦<br>Product</div>
-        <div class="box" onclick="location.href='details.html?cat=9'">🎥<br>Event</div>
+    <div class="bg">
+        <h2 style="text-align:center;">OUR SERVICES</h2>
+        <div class="grid">
+            <div class="box" onclick="location.href='details.html?cat=1'">🎬<br>Short Film</div>
+            <div class="box" onclick="location.href='details.html?cat=2'">🚀<br>Reel</div>
+            <div class="box" onclick="location.href='details.html?cat=3'">🛍️<br>Shop Ad</div>
+            <div class="box" onclick="location.href='details.html?cat=4'">🎥<br>Vlog</div>
+            <div class="box" onclick="location.href='details.html?cat=5'">🎙️<br>Podcast</div>
+            <div class="box" onclick="location.href='details.html?cat=6'">🎞️<br>Long</div>
+            <div class="box" onclick="location.href='details.html?cat=7'">⚡<br>Shorts</div>
+            <div class="box" onclick="location.href='details.html?cat=8'">📦<br>Product</div>
+            <div class="box" onclick="location.href='details.html?cat=9'">🎥<br>Event</div>
+        </div>
+        <div class="footer">
+            <a href="https://youtube.com/@defiant_edits"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sub.hhhh.nn"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917055495075"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </div>
 </body></html>
