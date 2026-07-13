@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="hi"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
 <style>
-    body { background: #000; color: #fff; font-family: 'Outfit', sans-serif; padding: 20px; }
-    .bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600'); background-size: cover; min-height: 100vh; padding: 20px; }
-    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 20px; margin: 15px auto; max-width: 500px; border-radius: 20px; backdrop-filter: blur(15px); transition: 0.3s; cursor: pointer; display: flex; align-items: center; }
-    .card:hover { background: rgba(0, 188, 212, 0.2); border-color: #00bcd4; transform: scale(1.02); }
+    body { background: #050505; color: #fff; font-family: sans-serif; padding: 20px; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
+    .box { background: #111; padding: 30px; border-radius: 15px; border: 1px solid #333; text-align: center; cursor: pointer; transition: 0.4s; }
+    .box:hover { background: #00bcd4; transform: translateY(-10px); }
 </style></head><body>
-    <div class="bg">
-        <h2 style="text-align: center;">OUR SERVICES</h2>
-        <div class="card" onclick="location.href='details.html?cat=1'">🎬 Cinematic Short Film</div>
-        <div class="card" onclick="location.href='details.html?cat=2'">🚀 Cinematic Reel</div>
-        <div class="card" onclick="location.href='details.html?cat=3'">🛍️ Shop Promotion</div>
-        <!-- Isi tarah baaki 6 add karein -->
+    <h2 style="text-align:center; font-size: 2.5rem;">OUR SERVICES</h2>
+    <div class="grid">
+        <div class="box" onclick="location.href='details.html?cat=1'">🎬<br>Short Film</div>
+        <div class="box" onclick="location.href='details.html?cat=2'">🚀<br>Reel</div>
+        <div class="box" onclick="location.href='details.html?cat=3'">🛍️<br>Shop Ad</div>
+        <div class="box" onclick="location.href='details.html?cat=4'">🎥<br>Vlog</div>
+        <div class="box" onclick="location.href='details.html?cat=5'">🎙️<br>Podcast</div>
+        <div class="box" onclick="location.href='details.html?cat=6'">🎞️<br>Long</div>
+        <div class="box" onclick="location.href='details.html?cat=7'">⚡<br>Shorts</div>
+        <div class="box" onclick="location.href='details.html?cat=8'">📦<br>Product</div>
+        <div class="box" onclick="location.href='details.html?cat=9'">🎥<br>Event</div>
     </div>
 </body></html>
